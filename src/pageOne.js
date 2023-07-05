@@ -1,4 +1,4 @@
-class PageOne {
+export default class PageOne {
     constructor(className, divContent) {
 
         if (divContent === null) { this.div = '' }
@@ -64,5 +64,3 @@ for (const [key, value] of Object.entries(hours)) {
     const hourInfo = new PageOne('hour-info', `${key}: ${value}`)
     hoursDiv.appendChild(hourInfo.element)
 }
-
-export default PageOne();

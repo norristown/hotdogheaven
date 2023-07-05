@@ -1,6 +1,6 @@
 import './style.css';
-import './cute_hotdog.jpg'
-import './dog_quote.jpg'
+// import './cute_hotdog.jpg'
+// import './dog_quote.jpg'
 // import Icon from './hotdog_bg.jpg';
 
 
@@ -14,11 +14,16 @@ import './dog_quote.jpg'
 // const content = document.querySelector('body')
 // content.appendChild(myIcon);
 
-import PageOne from './pageOne';
-function component() {
-    const element = document.createElement('div');
-    element.textContent = new PageOne();
-    return element
-}
+// import PageOne from './pageOne.js';
+// function component() {
+//     const element = document.createElement('div');
+//     element.textContent = new PageOne();
+//     return element
+// }
 
-document.body.appendChild(component())
+// document.body.appendChild(component())
+
+import PageOne from './pageOne.js';
+
+const content = new PageOne('content', '')
+document.body.appendChild(content)
