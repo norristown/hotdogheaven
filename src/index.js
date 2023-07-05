@@ -21,9 +21,23 @@ import './style.css';
 //     return element
 // }
 
-// document.body.appendChild(component())
+// content.appendChild(component())
 
 import PageOne from './pageOne.js';
 
-const content = new PageOne('content', '')
-document.body.appendChild(content)
+const body = new PageOne
+
+const tabHome = document.querySelector('.tab');
+const tabMenu = document.querySelector('.menu');
+const tabAbout = document.querySelector('.about');
+const content = document.querySelector('.content')
+
+tabHome.addEventListener('click', () => {
+    console.log('home click')
+    content.innerHTML = ''
+    body.pageOneFunction()
+})
+tabMenu.addEventListener('click', () => {
+    console.log('menu click')
+    content.innerHTML = '';
+})
