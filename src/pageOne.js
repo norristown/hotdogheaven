@@ -17,11 +17,11 @@ export default class PageOne {
         const blurbContent = `"Hot Dog Heaven is the best in hot dog flavor! 
     I come by at least three times a week and I would actually come more, 
     but I must exhbit some kind of self-control! HOT DOG HEAVEN NUMBER ONE!"`
-        const cuteHotDogSrc = `<img src="/src/cute_hotdog.jpg" class="hot-dog" alt="cute hot dog" width="200" height="200">`;
+        const cuteHotDogSrc = `<img src="src/cute_hotdog.jpg" class="hot-dog" alt="cute hot dog" width="200" height="200">`;
         const cuteHotDogClassName = 'hot-dog'
 
         const spotClass = 'spot'
-        const spotSrc = `-Spot<img src ="/src/dog_quote.jpg" alt="handsome dog" class="spot-pic">`
+        const spotSrc = `-Spot<img src ="src/dog_quote.jpg" alt="handsome dog" class="spot-pic">`
 
         const title = new PageOne(testClass, testContent)
         const blurb = new PageOne(blurbClass, blurbContent)
