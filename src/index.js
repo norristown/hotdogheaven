@@ -24,20 +24,26 @@ import './style.css';
 // content.appendChild(component())
 
 import PageOne from './pageOne.js';
+import PageTwo from './pageTwo.js'
 
-const body = new PageOne
+const one = new PageOne
+const two = new PageTwo
 
 const tabHome = document.querySelector('.tab');
 const tabMenu = document.querySelector('.menu');
 const tabAbout = document.querySelector('.about');
 const content = document.querySelector('.content')
 
-tabHome.addEventListener('click', () => {
-    console.log('home click')
-    content.innerHTML = ''
-    body.pageOneFunction()
-})
+tabHome.addEventListener('click', loadWebPage)
 tabMenu.addEventListener('click', () => {
     console.log('menu click')
     content.innerHTML = '';
+    two.menuFunction()
 })
+
+function loadWebPage () {
+    content.innerHTML = ''
+    one.home()
+}
+
+loadWebPage()

@@ -1,7 +1,7 @@
 export default class PageOne {
     constructor(className, divContent) {
 
-        if (typeof divContent === "undefined") { this.div = this.pageOneFunction() }
+        if (typeof divContent === "undefined") { this.div = this.home() }
         this.className = className;
         this.div = divContent;
 
@@ -10,18 +10,18 @@ export default class PageOne {
         this.element.innerHTML = divContent;
     }
 
-    pageOneFunction() {
+    home() {
         const testClass = 'container'
         const testContent = 'Hot Dog Heaven'
         const blurbClass = 'description'
         const blurbContent = `"Hot Dog Heaven is the best in hot dog flavor! 
-    I come by at least three times a week and I would actually come more, 
-    but I must exhbit some kind of self-control! HOT DOG HEAVEN NUMBER ONE!"`
-        const cuteHotDogSrc = `<img src="src/cute_hotdog.jpg" class="hot-dog" alt="cute hot dog" width="200" height="200">`;
+            I come by at least three times a week and I would actually come more, 
+            but I must exhbit some kind of self-control! HOT DOG HEAVEN NUMBER ONE!"`
+        const cuteHotDogSrc = `<img src="/src/images/cute_hotdog.jpg" class="hot-dog" alt="cute hot dog" width="200" height="200">`;
         const cuteHotDogClassName = 'hot-dog'
 
         const spotClass = 'spot'
-        const spotSrc = `-Spot<img src ="src/dog_quote.jpg" alt="handsome dog" class="spot-pic">`
+        const spotSrc = `-Spot<img src ="/src/images/dog_quote.jpg" alt="handsome dog" class="spot-pic">`
 
         const title = new PageOne(testClass, testContent)
         const blurb = new PageOne(blurbClass, blurbContent)

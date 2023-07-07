@@ -3,7 +3,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-image: url(/src/hotdog_bg.jpg);
+    background-image: url(/src/images/hotdog_bg.jpg);
     background-size: 60px;
     margin: 0;
 }
