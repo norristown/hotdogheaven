@@ -6,21 +6,25 @@ export default class PageTwo extends PageOne {
     }
 
     menuFunction() {
-        const menu = {
-            first: 'Hot Dog With No Bun',
-            second: 'Hot Dog With Bun',
-            third: 'Two Dogs One Bun',
-            fourth: 'Double Royal With Cheese',
-            milkshakes: 'Milkshakes'
+        const menu = [
+            'Hot Dog With No Bun',
+            'Hot Dog With Bun',
+            'Two Dogs One Bun',
+            'Double Royal With Cheese',
+            'Milkshakes'
+        ]
+
+
+        const menuHeader = new PageTwo('menu-header', 'Menu')
+        const content = document.querySelector('.content')
+        content.appendChild(menuHeader.element)
+        for (let i = 0; i < menu.length; i++) {
+            const menuBody = new PageTwo('menu-body', menu[i])
+            content.appendChild(menuBody.element)
         }
 
-        const menuDisplay = new PageTwo('className', 'Menu')
-        const content = document.querySelector('.content')
-        content.appendChild(menuDisplay.element)
-        
-        for (const [key, value] of Object.entries(menuDisplay)) {
-            const hourInfo = new PageOne('hour-info', `${key[value]}`)
-            hoursDiv.appendChild(hourInfo.element)
-        }
+
     }
+
+
 }

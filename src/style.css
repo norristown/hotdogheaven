@@ -123,3 +123,8 @@ body {
     color: white;
     text-decoration: none !important;
   }
+
+  .menu-body {
+    font-family: monospace;
+
+  }

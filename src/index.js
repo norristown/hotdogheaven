@@ -1,6 +1,6 @@
 import './style.css';
-// import './cute_hotdog.jpg'
-// import './dog_quote.jpg'
+import '.src/images/cute_hotdog.jpg'
+import '.src/images/dog_quote.jpg'
 // import Icon from './hotdog_bg.jpg';
 
 
@@ -39,9 +39,11 @@ tabMenu.addEventListener('click', () => {
     console.log('menu click')
     content.innerHTML = '';
     two.menuFunction()
+    
+
 })
 
-function loadWebPage () {
+function loadWebPage() {
     content.innerHTML = ''
     one.home()
 }
