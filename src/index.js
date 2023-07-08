@@ -1,6 +1,5 @@
 import './style.css';
-import './images/cute_hotdog.jpg'
-import './images/dog_quote.jpg'
+import './images'
 // import Icon from './hotdog_bg.jpg';
 
 
