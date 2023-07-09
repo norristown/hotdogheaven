@@ -21,7 +21,7 @@ export default class PageOne {
         const cuteHotDogClassName = 'hot-dog'
 
         const spotClass = 'spot'
-        const spotSrc = `-Spot<img src ="/src/images/dog_quote.jpg" alt="handsome dog" class="spot-pic">`
+        const spotSrc = `-Spot<img src ="/dist/972b77ddb4068f669d34.jpg" alt="handsome dog" class="spot-pic">`
 
         const title = new PageOne(testClass, testContent)
         const blurb = new PageOne(blurbClass, blurbContent)

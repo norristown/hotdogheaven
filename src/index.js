@@ -1,5 +1,5 @@
 import './style.css';
-import './images'
+
 // import Icon from './hotdog_bg.jpg';
 
 
@@ -35,16 +35,30 @@ const content = document.querySelector('.content')
 
 tabHome.addEventListener('click', loadWebPage)
 tabMenu.addEventListener('click', () => {
-    console.log('menu click')
     content.innerHTML = '';
+    tabColor(tabMenu, tabHome, tabAbout)
     two.menuFunction()
-    
+})
+tabAbout.addEventListener('click', () => {
+    content.innerHTML = '';
+    tabColor(tabAbout, tabHome, tabMenu)
 
 })
 
+
 function loadWebPage() {
     content.innerHTML = ''
+    tabColor(tabHome, tabMenu, tabAbout)
     one.home()
 }
 
 loadWebPage()
+
+function tabColor(tab, tab2, tab3) {
+    tab.style.backgroundColor = '#FBAC4D'
+    tab.style.color = '#6D184F'
+    tab2.style.backgroundColor = '#6D184F'
+    tab2.style.color = '#FBAC4D'
+    tab3.style.backgroundColor = '#6D184F'
+    tab3.style.color = '#FBAC4D'
+}
