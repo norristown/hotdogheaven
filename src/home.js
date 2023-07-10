@@ -1,4 +1,4 @@
-export default class PageOne {
+export default class Home {
     constructor(className, divContent) {
 
         if (typeof divContent === "undefined") { this.div = this.home() }
@@ -11,26 +11,29 @@ export default class PageOne {
     }
 
     home() {
-        const testClass = 'container'
-        const testContent = 'Hot Dog Heaven'
-        const blurbClass = 'description'
+        let image1 = require('./images/cute_hotdog.jpg')
+        const cuteHotDog = document.createElement('img')
+        cuteHotDog.style.height = '200px'
+        cuteHotDog.style.width = '200px'
+        cuteHotDog.src = image1
+
+        let image2 = require('./images/dog_quote.jpg')
+        const handsomeDog = document.createElement('img')
+        handsomeDog.classList.add('spot-pic')
+        handsomeDog.src = image2
+
         const blurbContent = `"Hot Dog Heaven is the best in hot dog flavor! 
             I come by at least three times a week and I would actually come more, 
             but I must exhbit some kind of self-control! HOT DOG HEAVEN NUMBER ONE!"`
-        const cuteHotDogSrc = `<img src="/src/images/cute_hotdog.jpg" class="hot-dog" alt="cute hot dog" width="200" height="200">`;
-        const cuteHotDogClassName = 'hot-dog'
 
-        const spotClass = 'spot'
-        const spotSrc = `-Spot<img src ="/dist/972b77ddb4068f669d34.jpg" alt="handsome dog" class="spot-pic">`
-
-        const title = new PageOne(testClass, testContent)
-        const blurb = new PageOne(blurbClass, blurbContent)
-        const img = new PageOne(cuteHotDogClassName, cuteHotDogSrc)
-        const dogImg = new PageOne(spotClass, spotSrc)
+        const title = new Home('container', 'Hot Dog Heaven')
+        const blurb = new Home('description', blurbContent)
+        const img = new Home('hot-dog', `<img src="${image1}" height="200px" width="200px" alt="cute hot dog" class="hot-dog">`)
+        const dogImg = new Home('spot', `-Spot<img src ="${image2}" alt="handsome dog" class="spot-pic">`)
 
         const content = document.querySelector('.content');
         for (let i = 0; i < 4; i++) {
-            const divContainer = new PageOne(`container-${[i + 1]}`, '')
+            const divContainer = new Home(`container-${[i + 1]}`, '')
             content.appendChild(divContainer.element)
         }
 
@@ -40,8 +43,9 @@ export default class PageOne {
         const hoursDiv = document.querySelector('.container-4')
         hoursDiv.innerHTML = `<div class="hours-header">Hours</div>`
 
-        header.appendChild(img.element)
         header.appendChild(title.element)
+        header.appendChild(img.element)
+
         middle.appendChild(blurb.element)
         end.appendChild(dogImg.element)
 
@@ -56,12 +60,12 @@ export default class PageOne {
         }
 
         const location = 'Location: 123 Hot Dog Heaven Road, Norristown USA 10101'
-        const locationDiv = new PageOne('location', location)
+        const locationDiv = new Home('location', location)
         content.appendChild(locationDiv.element)
 
 
         for (const [key, value] of Object.entries(hours)) {
-            const hourInfo = new PageOne('hour-info', `${key}: ${value}`)
+            const hourInfo = new Home('hour-info', `${key}: ${value}`)
             hoursDiv.appendChild(hourInfo.element)
         }
     }
