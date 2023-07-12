@@ -8,7 +8,7 @@ export default class Menu {
 
         this.element = document.createElement('div');
         this.element.className = className
-        this.element.innerHTML = `<h3>${name}</h3>${text}<br>${price}<br><img src="${img}" height="50px" width="50px"<br>`;
+        this.element.innerHTML = `<h3>${name}</h3>${text}<br>${price}<br><img class="right" src="${img}" height="50px" width="50px"><img class="left" src="${img}" height="50px" width="50px"><br>`;
     }
 
     menuFunction() {
@@ -58,7 +58,10 @@ export default class Menu {
                 img: img
             }
         ]
-
+        const header = document.createElement('div')
+        header.classList.add('menu-header')
+        header.innerHTML = `<img class="left" src="${img}" height="50px" width="50px"><div>Menu</div><img class="right" src="${img}" height="50px" width="50px">`
+        content.appendChild(header)
         const one = new Menu(menu[1].name, menu[1].text, menu[1].price, menu[1].img, 'menu')
         const two = new Menu(menu[2].name, menu[2].text, menu[2].price, menu[2].img, 'menu')
         const three = new Menu(menu[3].name, menu[3].text, menu[3].price, menu[3].img, 'menu')
@@ -69,9 +72,11 @@ export default class Menu {
         content.appendChild(three.element)
         content.appendChild(four.element)
         content.appendChild(five.element)
-
+        
+       
     }
 
+    
 
 
 }

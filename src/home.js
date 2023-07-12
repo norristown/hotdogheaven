@@ -22,11 +22,12 @@ export default class Home {
         handsomeDog.classList.add('spot-pic')
         handsomeDog.src = image2
 
-        const blurbContent = `"Hot Dog Heaven is the best in hot dog flavor! 
+        const blurbContent = `<blockquote>"Hot Dog Heaven is the best in hot dog flavor! 
             I come by at least three times a week and I would actually come more, 
-            but I must exhbit some kind of self-control! HOT DOG HEAVEN NUMBER ONE!"`
+            but I must exhbit some kind of self-control! HOT DOG HEAVEN NUMBER ONE!"</blockquote>`
 
-        const title = new Home('container', 'Hot Dog Heaven')
+        const title = new Home('banner-text', 'Hot Dog Heaven')
+        const est = new Home('est', 'Established 1990')
         const blurb = new Home('description', blurbContent)
         const img = new Home('hot-dog', `<img src="${image1}" height="200px" width="200px" alt="cute hot dog" class="hot-dog">`)
         const dogImg = new Home('spot', `-Spot<img src ="${image2}" alt="handsome dog" class="spot-pic">`)
@@ -41,10 +42,11 @@ export default class Home {
         const middle = document.querySelector('.container-2')
         const end = document.querySelector('.container-3')
         const hoursDiv = document.querySelector('.container-4')
-        hoursDiv.innerHTML = `<div class="hours-header">Hours</div>`
-
-        header.appendChild(title.element)
+        hoursDiv.innerHTML = `<div class="hours-header"><strong>Hours</strong></div>`
         header.appendChild(img.element)
+        header.appendChild(title.element)
+        header.appendChild(est.element)
+
 
         middle.appendChild(blurb.element)
         end.appendChild(dogImg.element)
@@ -59,7 +61,7 @@ export default class Home {
             'Saturday': '12pm - 12am'
         }
 
-        const location = 'Location: 123 Hot Dog Heaven Road, Norristown USA 10101'
+        const location = `<strong>Location: 123 Hot Dog Heaven Road, Norristown USA 10101</strong>`
         const locationDiv = new Home('location', location)
         content.appendChild(locationDiv.element)
 
